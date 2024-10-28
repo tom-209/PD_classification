@@ -1,0 +1,13 @@
+name: PD
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+
+dependencies:
+  - numpy=1.23.5
+  - pandas=2.2.2
+  - scikit-learn=1.5.1
+  - tensorflow=2.13.0  
+  - xgboost=2.1.1
+  - statistics  # included in Python standard library
