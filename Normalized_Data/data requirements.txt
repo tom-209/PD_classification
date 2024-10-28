@@ -1,0 +1,9 @@
+To ensure the scripts run successfully, please include the following files in the repository folder. Due to data-sharing restrictions from the PPMI (Parkinson's Progression Markers Initiative), these files are not included in this repository:
+
+Hepatology.csv
+Image.csv
+Metabolomic.csv
+Proteomic_project_151.csv
+RNAseq.csv
+
+Please obtain the necessary data from the PPMI website and preprocess these files accordingly before running the scripts.
