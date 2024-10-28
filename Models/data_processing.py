@@ -9,12 +9,12 @@ def load_and_merge_data(patient_list):
         df = df.sort_values(by="PATNO").reset_index(drop=True)
         return df
 
-    hepatology = load_data("../Normalized_Data/Hepatology v2.csv")
-    image = load_data("../Normalized_Data/Image_Normalized v2.csv")
-    meta_1 = load_data("../Normalized_Data/Metabolomic_Part1_Normalized v2.csv")
-    meta_2 = load_data("../Normalized_Data/Metabolomic_Part2_Normalized v2.csv")
-    protein = load_data('../Normalized_Data/Proteomic_project_151_normalized v2.csv')
-    rna = load_data("../Normalized_Data/RNAseq_Normalized v2.csv")
+    hepatology = load_data("../Normalized_Data/Hepatology.csv")
+    image = load_data("../Normalized_Data/Image.csv")
+    meta_1 = load_data("../Normalized_Data/Metabolomic_Part1.csv")
+    meta_2 = load_data("../Normalized_Data/Metabolomic_Part2.csv")
+    protein = load_data('../Normalized_Data/Proteomic_project_151.csv')
+    rna = load_data("../Normalized_Data/RNAseq.csv")
 
 
     features = hepatology.merge(meta_1, on='PATNO') \
