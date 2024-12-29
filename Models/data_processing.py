@@ -9,7 +9,7 @@ def load_and_merge_data(patient_list):
         df = df.sort_values(by="PATNO").reset_index(drop=True)
         return df
 
-    hepatology = load_data("../Normalized_Data/Hepatology.csv")
+    hematology = load_data("../Normalized_Data/Hematology.csv")
     image = load_data("../Normalized_Data/Image.csv")
     meta_1 = load_data("../Normalized_Data/Metabolomic_Part1.csv")
     meta_2 = load_data("../Normalized_Data/Metabolomic_Part2.csv")
@@ -17,7 +17,7 @@ def load_and_merge_data(patient_list):
     rna = load_data("../Normalized_Data/RNAseq.csv")
 
 
-    features = hepatology.merge(meta_1, on='PATNO') \
+    features = hematology.merge(meta_1, on='PATNO') \
                          .merge(meta_2, on='PATNO') \
                          .merge(protein, on='PATNO') \
                          .merge(rna, on='PATNO')\
