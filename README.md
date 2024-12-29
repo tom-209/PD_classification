@@ -41,7 +41,7 @@ The environment name is PD as defined in the environment.yml file.
 ## Run the scripts
 After all necessary data files are obtained, go the the folder "Models" and use the following command to run the program:
 ```
-Python FCNN_C model.py
+python FCNN_C model.py
 ```
 Note: change the model name to run different models.
 
