@@ -20,6 +20,18 @@
 ├── README.md
 └── environmental.yml
 
+## Repository structure and usage
+
+.
+├── Models                       # Folder containing all models
+│   ├── FCNN_C_model.py          # The fully connected neural network (concatenation)
+│   ├── FCNN_JM_model.py         # The fully connected neural network (joint modeling)
+│   ├── MMT_CA_model.py          # The multi-modal transformer with cross-attention
+│   ├── SVM_model.py             # The SVM model
+│   ├── XGBoost_model.py         # The XGBoost model
+│   └── data_processing.py       # The data processing script
+
+
 ## Run the scripts
 After all necessary data files are obtained, use the following command to run the program:
 ```
