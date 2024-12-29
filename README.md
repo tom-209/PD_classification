@@ -1,5 +1,6 @@
 # PD_classification
 ## Repository structure and usage
+```
 .
 ├── Models                            # Folder containing five models and data_processing file
 │   ├── FCNN_C model.py               # The fully connected neural networks with concatenation model
@@ -19,25 +20,32 @@
 ├── LICENSE
 ├── README.md
 └── environmental.yml
+```
 
-## Repository structure and usage
+## Quick Start: Setup Your Environment
+To begin, install the environment using:
+```
+conda env create -f environment.yml
+```
+This will take a bit of time to run.
 
-.
-├── Models                       # Folder containing all models
-│   ├── FCNN_C_model.py          # The fully connected neural network (concatenation)
-│   ├── FCNN_JM_model.py         # The fully connected neural network (joint modeling)
-│   ├── MMT_CA_model.py          # The multi-modal transformer with cross-attention
-│   ├── SVM_model.py             # The SVM model
-│   ├── XGBoost_model.py         # The XGBoost model
-│   └── data_processing.py       # The data processing script
+Please note that for the code above to work, you need to be in the directory where the environment.yml file stays
 
+Activate the environment that you'd like to use
+Conda 4.6 and later versions (all operating systems):
+```
+conda activate PD
+```
+The environment name is PD as defined in the environment.yml file.
 
 ## Run the scripts
-After all necessary data files are obtained, use the following command to run the program:
+After all necessary data files are obtained, go the the folder "Models" and use the following command to run the program:
 ```
 Python FCNN_C model.py
 ```
 Note: change the model name to run different models.
+
+
 
 ## Participants No.
 Due to data use agreement, the original files of data are not included in this repository. The 306 participants included in this study are listed as follows:
@@ -75,6 +83,16 @@ patient_list = [
     4071, 4074, 4075, 4077, 51186, 4090, 4091, 4092, 4093
 ]
 ```
+The description of data modalities and how they should be processed before normalized are listed as follows:
 
+```
+-The blood chemistry and hematology table in the PPMI dataset contains numerous blood test results. The top 39 indicators, available for most participants, were selected for further analysis. After balancing the number of participants with the data availability from other data types, 38 indicators were retained for this study. 
 
+-The proteomics comes from Project 151 (Identification of Proteins & Protein Networks in Human CSF That Differentiate Within PD Participants), which involved cerebrospinal fluid testing on Parkinson's, prodromal, and healthy control participants. Proteomics data with missing values were excluded from this study. 
 
+-The RNA sequencing data used in this study were obtained from the RNA-seq of PPMI whole blood samples in Interim Release 3 (IR3). The PPMI RNA Sequencing Project includes transcriptomic data from raw sequencing reads of 1,600 PPMI whole blood samples. After conducting RNA-seq analysis using DESeq2 in R, this study retained 10,653 genes for further analysis, selecting genes with an adjusted p-value of less than 0.05 as statistically significant. 
+
+-The metabolomics data were obtained from PPMI Project 180 (Metabolomic Analysis of Penetrance, Prognosis, & Tracking Biomarkers of LRRK2 PD), which collected plasma samples from Parkinson's, prodromal, and healthy control participants. These samples were analyzed using liquid chromatography coupled with mass spectrometry (LC/MS) to measure a variety of metabolites and lipids, including purines, lipids associated with lysosomal function (e.g., sphingolipids), bis(monoacyl)glycerophosphate (BMP), pro/antioxidant and pro/anti-inflammatory molecules, and environmental/dietary exposure markers. After preprocessing, 1,016 test values were retained in this study for further analysis. 
+
+-For this study, the following DaTscan variables were used for further analysis: DATSCAN_CAUDATE_L, DATSCAN_CAUDATE_R, DATSCAN_PUTAMEN_L, DATSCAN_PUTAMEN_R, lowput_expected, mean_caudate, mean_putamen, and mean_striatum.
+```
