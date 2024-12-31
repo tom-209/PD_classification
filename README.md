@@ -96,3 +96,7 @@ The description of data modalities and how they should be processed before norma
 
 -For this study, the following DaTscan variables were used for further analysis: DATSCAN_CAUDATE_L, DATSCAN_CAUDATE_R, DATSCAN_PUTAMEN_L, DATSCAN_PUTAMEN_R, lowput_expected, mean_caudate, mean_putamen, and mean_striatum.
 ```
+
+If you use scripts in this repository, please cite:
+"A Novel Integrative Multi-Modal Classifier to Enhance the Diagnosis of Parkinson’s Disease", Xiaoyan Zhou, Luca Parisi , Wentao Huang, Yihan Zhang, Xiaoqun Huang,
+Mansour Youseffi, Farideh Javid and Renfei Ma*
